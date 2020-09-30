@@ -1,0 +1,148 @@
+body {
+    display: grid;
+    grid-template-areas: "header header header header" "sidebar sidebar sidebar sidebar" "content content content content" "aside aside aside aside" "main main main main" "footer footer footer footer";
+    grid-template-columns: 20% 20% 30% 30%;
+    margin: 0px;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+sidebar {
+    grid-area: sidebar;
+    display: flex;
+    align-items: center;
+    padding-left: 45.5%;
+    background-color: #dce3de;
+    box-shadow: inset 0px 2.5px 1px 0px silver;
+    font-family: 'Roboto', sans-serif;
+}
+
+content {
+    grid-area: content;
+    text-align: center;
+    background-color: #f0f5f1;
+    max-height: 200px;
+    min-height: 150px;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+content input {
+    background-color: #9356DC;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
+    margin-bottom: 5%;
+    border: none;
+    &:hover {
+        box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
+    }
+}
+
+aside {
+    grid-area: aside;
+    font-family: 'Roboto', sans-serif;
+    & h3 {
+        text-align: center;
+    }
+}
+
+fieldset {
+    background-color: #f0f5f1;
+    border: none;
+    box-shadow: 2px 2px 5px 2px silver;
+    border-radius: 20px;
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    &:hover {
+        background-color: #f3ebf7;
+    }
+}
+
+fieldset legend {
+    background-color: #9356DC;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding: 0px;
+    & p {
+        margin: auto;
+        margin-top: 8px;
+    }
+}
+
+main {
+    grid-area: main;
+    font-family: 'Roboto', sans-serif;
+    height: 1400px;
+}
+
+footer {
+    grid-area: footer;
+    font-family: 'Roboto', sans-serif;
+    background-color: #222422;
+    color: white;
+    text-align: center;
+    & h1 {
+        font-family: 'Shrikhand', cursive;
+    }
+}
+
+#menilmontant,
+#folie_mericourt,
+#cite_rouge {
+    max-width: 540px;
+    max-height: 550px;
+    margin-top: 45px;
+    border: 5px solid white;
+}
+
+#charonne {
+    max-height: 450px;
+    transform: rotate(270deg);
+    border: 5px solid white;
+}
+
+.main_block_un,
+.main_block_deux {
+    max-width: 100%;
+    max-height: 600px;
+    display: flex;
+    justify-content: space-around;
+    height: inherit;
+}
+
+.main_conteneur {
+    display: block;
+    text-align: center;
+    background-color: #f0f5f1;
+    max-width: 800px;
+    max-height: 700px;
+    width: 100%;
+    margin: 20px;
+    border-radius: 10%;
+}
+
+.main_conteneur_charonne {
+    background-color: #f0f5f1;
+    max-width: 800px;
+    max-height: 700px;
+    width: 100%;
+    margin: 20px;
+    display: block;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.block_inside_charonne {
+    margin-top: -41px;
+}
