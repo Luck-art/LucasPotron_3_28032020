@@ -8,14 +8,11 @@ body {
 header {
     grid-area: header;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
 }
 
 sidebar {
     grid-area: sidebar;
     display: flex;
-    align-items: center;
-    padding-left: 45.5%;
     background-color: #dce3de;
     box-shadow: inset 0px 2.5px 1px 0px silver;
     font-family: 'Roboto', sans-serif;
@@ -57,7 +54,7 @@ fieldset {
     border: none;
     box-shadow: 2px 2px 5px 2px silver;
     border-radius: 20px;
-    width: 1500px;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
@@ -84,6 +81,8 @@ main {
     grid-area: main;
     font-family: 'Roboto', sans-serif;
     height: 1400px;
+    background-color: #f0f5f1;
+    margin-top: 7%;
 }
 
 footer {
@@ -100,16 +99,21 @@ footer {
 #menilmontant,
 #folie_mericourt,
 #cite_rouge {
-    max-width: 540px;
-    max-height: 550px;
-    margin-top: 45px;
-    border: 5px solid white;
+    height: auto;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
 }
 
 #charonne {
-    max-height: 450px;
-    transform: rotate(270deg);
-    border: 5px solid white;
+    height: 59.5%;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.inside_sidebar {
+    display: flex;
+    align-items: center;
+    margin: auto;
 }
 
 .main_block_un,
@@ -119,30 +123,29 @@ footer {
     display: flex;
     justify-content: space-around;
     height: inherit;
+    & a {
+        text-decoration: none;
+        color: black;
+    }
 }
 
 .main_conteneur {
     display: block;
     text-align: center;
-    background-color: #f0f5f1;
-    max-width: 800px;
+    max-width: 500px;
     max-height: 700px;
-    width: 100%;
     margin: 20px;
     border-radius: 10%;
+    background-color: white;
 }
 
 .main_conteneur_charonne {
-    background-color: #f0f5f1;
-    max-width: 800px;
+    background-color: white;
+    max-width: 500px;
     max-height: 700px;
     width: 100%;
     margin: 20px;
     display: block;
     text-align: center;
     border-radius: 10%;
-}
-
-.block_inside_charonne {
-    margin-top: -41px;
 }
