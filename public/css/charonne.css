@@ -1,0 +1,90 @@
+body {
+  display: grid;
+  grid-template-areas: "header header header header" "aside aside aside aside" "main main main main" "footer footer footer footer";
+  grid-template-columns: 20% 20% 30% 30%;
+  margin: 0px;
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+}
+
+aside {
+  grid-area: aside;
+  width: auto;
+}
+
+main {
+  grid-area: main;
+  border-radius: 60px 60px 0px 0px;
+  bottom: 180px;
+  position: relative;
+  height: 1500px;
+  width: auto;
+  background-color: #dce3de;
+  margin-bottom: -180px;
+  font-family: "Roboto", sans-serif;
+}
+
+main input {
+  background-color: #9356DC;
+  color: white;
+  height: 50px;
+  width: 200px;
+  border-radius: 30px;
+  margin-top: 3%;
+  border: none;
+  margin-left: 45%;
+}
+main input:hover {
+  box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
+}
+
+footer {
+  grid-area: footer;
+  font-family: "Roboto", sans-serif;
+  background-color: #222422;
+  color: white;
+  text-align: center;
+}
+footer h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+#charonne {
+  width: 100%;
+  height: auto;
+}
+
+.french {
+  margin-bottom: 7em;
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+}
+
+.main_food {
+  text-align: center;
+}
+
+.main_price {
+  margin-top: 15%;
+}
+
+.card_main {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f5f1;
+  max-width: 400px;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.inside_card_main {
+  display: block;
+}
+
+/*# sourceMappingURL=charonne.css.map */

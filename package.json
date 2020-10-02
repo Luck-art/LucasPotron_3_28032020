@@ -1,0 +1,14 @@
+{
+    "name": "projet3-sass",
+    "version": "1.0.0",
+    "description": "Projet_3_openclassrooms",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./sass/main.scss:public/css/style.css ./sass/cite_rouge.scss:public/css/cite_rouge.css ./sass/menilmontant.scss:public/css/menilmontant.css ./sass/charonne.scss:public/css/charonne.css ./sass/folie_mericourt.scss:public/css/folie_mericourt.css"
+    },
+    "author": "Lucas",
+    "license": "ISC",
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.0"
+    }
+}
