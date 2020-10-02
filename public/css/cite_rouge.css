@@ -51,6 +51,14 @@ footer {
 footer h1 {
   font-family: "Shrikhand", cursive;
 }
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+#back {
+  float: left;
+}
 
 #cite_rouge {
   width: 100%;
