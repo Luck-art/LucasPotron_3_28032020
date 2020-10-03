@@ -84,6 +84,40 @@ main {
   background-color: #f0f5f1;
   margin-top: 7%;
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  main {
+    /*Responsive tablette*/
+    height: 2200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  main {
+    /*Responsive mobile*/
+    height: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  main h1 {
+    /*Responsive tablette*/
+    margin: 0px 0px 0px 10px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  main h1 {
+    /*Responsive mobile*/
+    margin: 0px 0px 0px 10px;
+  }
+}
 
 footer {
   grid-area: footer;
@@ -113,6 +147,18 @@ footer a {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
 }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #charonne {
+    /*Responsive tablette*/
+    height: 74.082%;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  #charonne {
+    /*Responsive tablette*/
+    height: 60.1%;
+  }
+}
 
 .inside_sidebar {
   display: flex;
@@ -132,6 +178,23 @@ footer a {
 .main_block_deux a {
   text-decoration: none;
   color: black;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .main_block_un,
+.main_block_deux {
+    /*Responsive tablette*/
+    flex-direction: column;
+    max-height: inherit;
+    align-items: center;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .main_block_un,
+.main_block_deux {
+    /*Responsive mobile*/
+    flex-direction: column;
+    max-height: inherit;
+  }
 }
 
 .main_conteneur {
@@ -153,6 +216,20 @@ footer a {
   display: block;
   text-align: center;
   border-radius: 10%;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .main_conteneur_charonne {
+    /*Responsive tablette*/
+    width: auto;
+    max-height: 432px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .main_conteneur_charonne {
+    /*Responsive mobile*/
+    width: auto;
+    max-height: 312px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
