@@ -39,6 +39,16 @@ main input {
     &:hover {
         box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-left: 37%;
+        margin-top: 5%;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-top: 5%;
+        margin-left: 23%;
+    }
 }
 
 footer {
@@ -54,6 +64,14 @@ footer {
         text-decoration: none;
         color: white;
     }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive smartphone*/
+        text-align: initial;
+    }
+}
+
+#logo {
+    max-width: -moz-available;
 }
 
 #back {
