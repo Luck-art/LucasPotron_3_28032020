@@ -5,6 +5,14 @@ body {
     margin: 0px;
 }
 
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin shrikhand {
+    font-family: 'Shrikhand', cursive;
+}
+
 header {
     grid-area: header;
     text-align: center;
@@ -53,12 +61,12 @@ main input {
 
 footer {
     grid-area: footer;
-    font-family: 'Roboto', sans-serif;
+    @include roboto;
     background-color: #222422;
     color: white;
     text-align: center;
     & h1 {
-        font-family: 'Shrikhand', cursive;
+        @include shrikhand;
     }
     & a {
         text-decoration: none;
@@ -67,6 +75,7 @@ footer {
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive smartphone*/
         text-align: initial;
+        padding-left: 15px;
     }
 }
 
@@ -111,4 +120,38 @@ footer {
 
 .inside_card_main {
     display: block;
+}
+
+.inside_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        justify-content: initial;
+    }
+}
+
+.fas.fa-utensils {
+    margin-right: 10px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-right: 10px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-right: 10px;
+    }
+}
+
+.fas.fa-hands-helping {
+    margin-right: 10px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-right: 10px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-right: 10px;
+    }
 }

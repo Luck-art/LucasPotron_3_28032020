@@ -20,11 +20,10 @@ main {
   border-radius: 60px 60px 0px 0px;
   bottom: 180px;
   position: relative;
-  height: 1500px;
   width: auto;
   background-color: #dce3de;
-  margin-bottom: -180px;
   font-family: "Roboto", sans-serif;
+  padding-bottom: 30px;
 }
 
 main input {
@@ -61,6 +60,7 @@ footer {
   background-color: #222422;
   color: white;
   text-align: center;
+  margin-top: -180px;
 }
 footer h1 {
   font-family: "Shrikhand", cursive;
@@ -73,6 +73,7 @@ footer a {
   footer {
     /*Responsive smartphone*/
     text-align: initial;
+    padding-left: 15px;
   }
 }
 
@@ -117,6 +118,50 @@ footer a {
 
 .inside_card_main {
   display: block;
+}
+
+.inside_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .inside_footer {
+    /*Responsive mobile*/
+    justify-content: initial;
+  }
+}
+
+.fas.fa-utensils {
+  margin-right: 10px;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .fas.fa-utensils {
+    /*Responsive tablette*/
+    margin-right: 10px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .fas.fa-utensils {
+    /*Responsive mobile*/
+    margin-right: 10px;
+  }
+}
+
+.fas.fa-hands-helping {
+  margin-right: 10px;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .fas.fa-hands-helping {
+    /*Responsive tablette*/
+    margin-right: 10px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .fas.fa-hands-helping {
+    /*Responsive mobile*/
+    margin-right: 10px;
+  }
 }
 
 /*# sourceMappingURL=charonne.css.map */

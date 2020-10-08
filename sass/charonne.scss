@@ -5,6 +5,14 @@ body {
     margin: 0px;
 }
 
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin shrikhand {
+    font-family: 'Shrikhand', cursive;
+}
+
 header {
     grid-area: header;
     text-align: center;
@@ -20,11 +28,10 @@ main {
     border-radius: 60px 60px 0px 0px;
     bottom: 180px;
     position: relative;
-    height: 1500px;
     width: auto;
     background-color: #dce3de;
-    margin-bottom: -180px;
-    font-family: 'Roboto', sans-serif;
+    @include roboto;
+    padding-bottom: 30px;
 }
 
 main input {
@@ -53,12 +60,13 @@ main input {
 
 footer {
     grid-area: footer;
-    font-family: 'Roboto', sans-serif;
+    @include roboto;
     background-color: #222422;
     color: white;
     text-align: center;
+    margin-top: -180px;
     & h1 {
-        font-family: 'Shrikhand', cursive;
+        @include shrikhand;
     }
     & a {
         text-decoration: none;
@@ -67,6 +75,7 @@ footer {
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive smartphone*/
         text-align: initial;
+        padding-left: 15px;
     }
 }
 
@@ -86,7 +95,7 @@ footer {
 .french {
     margin-bottom: 7em;
     text-align: center;
-    font-family: 'Shrikhand', cursive;
+    @include shrikhand;
 }
 
 .main_food {
@@ -111,4 +120,38 @@ footer {
 
 .inside_card_main {
     display: block;
+}
+
+.inside_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        justify-content: initial;
+    }
+}
+
+.fas.fa-utensils {
+    margin-right: 10px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-right: 10px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-right: 10px;
+    }
+}
+
+.fas.fa-hands-helping {
+    margin-right: 10px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-right: 10px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-right: 10px;
+    }
 }
