@@ -1,0 +1,285 @@
+body {
+    display: grid;
+    grid-template-areas: "header header header header" "aside aside aside aside" "main main main main" "footer footer footer footer";
+    grid-template-columns: 20% 20% 30% 30%;
+    margin: 0px;
+}
+
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin shrikhand {
+    font-family: 'Shrikhand', cursive;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+}
+
+aside {
+    grid-area: aside;
+    width: auto;
+}
+
+main {
+    grid-area: main;
+    border-radius: 60px 60px 0px 0px;
+    bottom: 55px;
+    position: relative;
+    height: 1500px;
+    width: auto;
+    background-color: #dce3de;
+    margin-bottom: -55px;
+    font-family: 'Roboto', sans-serif;
+    & h1 {
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            /*Responsive tablette*/
+            font-size: x-large;
+        }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+            /*Responsive mobile*/
+            font-size: x-large;
+        }
+    }
+}
+
+main input {
+    background-color: #9356DC;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 30px;
+    margin-top: 3%;
+    border: none;
+    margin-left: 45%;
+    &:hover {
+        box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-left: 37%;
+        margin-top: 5%;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-top: 5%;
+        margin-left: 23%;
+    }
+}
+
+footer {
+    grid-area: footer;
+    @include roboto;
+    background-color: #222422;
+    color: white;
+    text-align: center;
+    & h1 {
+        @include shrikhand;
+    }
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive smartphone*/
+        text-align: initial;
+        padding-left: 15px;
+    }
+}
+
+.fas.fa-heart.fa-2x {
+    color: #edebe6;
+    border-color: black;
+    &:active {
+        color: #9356DC;
+    }
+}
+
+#logo {
+    max-width: -moz-available;
+    max-width: -webkit-fill-available;
+}
+
+#back {
+    float: left;
+}
+
+.menu_img {
+    width: 100%;
+    height: auto;
+}
+
+.french {
+    display: block;
+    @include shrikhand;
+    text-align: center;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 7em;
+        text-align: center;
+        @include shrikhand;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 7em;
+        text-align: center;
+        @include shrikhand;
+    }
+}
+
+.main_food {
+    text-align: center;
+}
+
+.main_price {
+    margin-top: 15%;
+}
+
+.card_main {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f5f1;
+    max-width: 400px;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 10px;
+    padding-left: 1%;
+    overflow: hidden;
+    .anime__select {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #99E2D0;
+        border-radius: 0 25px 25px 0;
+        opacity: 0;
+        margin-right: -20%;
+        transition: ease-out 300ms;
+        i {
+            font-size: 1.5rem;
+            color: white;
+        }
+    }
+    &:hover .anime__select {
+        /*animation: appear-validate 1s forwards 100ms;*/
+        opacity: 1;
+        margin-right: 0;
+        transition: ease-in 300ms;
+        & .circle {
+            animation: rotate_circle 0.5s linear;
+        }
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        /*&:active .anime__select {
+            animation: appear-validate 1s forwards 100ms;
+            opacity: 1;
+            margin-right: 0;
+            transition: ease-in 300ms;*/
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    /*Responsive mobile*/
+}
+
+.inside_card_main {
+    display: block;
+    min-width: 70%;
+    p:first-of-type {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+@keyframes appear-menu {
+    0% {
+        transform-origin: 50% top;
+        transform: scaleY(0);
+        transition: transform 500ms;
+        opacity: 0;
+    }
+    100% {
+        transform: scaleY(1);
+        transition: transform 500ms;
+        opacity: 1;
+    }
+}
+
+@keyframes appear-validate {
+    0% {
+        transform-origin: 50% right;
+        margin-right: -20%;
+        transition: margin-right 500ms ease-in-out;
+        opacity: 0;
+    }
+    100% {
+        margin-right: 0%;
+        transition: margin-right 500ms ease-in-out;
+        opacity: 1;
+    }
+}
+
+@keyframes rotate_circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.contenue_un {
+    animation: appear-menu 4s forwards 250ms;
+}
+
+.contenue_deux {
+    animation: appear-menu 5s forwards 450ms;
+}
+
+.contenue_trois {
+    animation: appear-menu 6s forwards 550ms;
+}
+
+.inside_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        justify-content: initial;
+    }
+}
+
+.fas.fa-utensils {
+    margin-right: 10px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-right: 10px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-right: 10px;
+    }
+}
+
+.fas.fa-hands-helping {
+    margin-right: 10px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-right: 10px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-right: 10px;
+    }
+}

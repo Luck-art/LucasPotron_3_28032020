@@ -1,8 +1,27 @@
 body {
-    display: grid;
-    grid-template-areas: "header header header header" "sidebar sidebar sidebar sidebar" "content content content content" "aside aside aside aside" "main main main main" "footer footer footer footer";
-    grid-template-columns: 20% 20% 30% 30%;
     margin: 0px;
+}
+
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin shrikhand {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin background_f0f5f1 {
+    background-color: #f0f5f1;
+}
+
+@mixin background_9356DC {
+    background-color: #9356DC;
+}
+
+@mixin menus {
+    height: auto;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
 }
 
 header {
@@ -15,21 +34,32 @@ sidebar {
     display: flex;
     background-color: #dce3de;
     box-shadow: inset 0px 2.5px 1px 0px silver;
-    font-family: 'Roboto', sans-serif;
+    @include roboto;
 }
 
 content {
     grid-area: content;
     text-align: center;
-    background-color: #f0f5f1;
+    @include background_f0f5f1;
+    @include roboto;
     max-height: 350px;
     min-height: 300px;
     height: auto;
-    font-family: 'Roboto', sans-serif;
+    & h2 {
+        margin-top: 3.5%;
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            /*Responsive tablette*/
+            margin-top: 10%;
+        }
+        @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+            /*Responsive mobile*/
+            margin-top: 15%;
+        }
+    }
 }
 
 content input {
-    background-color: #9356DC;
+    @include background_9356DC;
     color: white;
     height: 50px;
     width: 200px;
@@ -39,53 +69,93 @@ content input {
     &:hover {
         box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
     }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        &:active {
+            box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
+        }
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        &:active {
+            box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
+        }
+    }
 }
 
 aside {
     grid-area: aside;
-    font-family: 'Roboto', sans-serif;
+    @include roboto;
     & h3 {
         text-align: center;
+    }
+    & i {
+        margin-right: 20px;
     }
 }
 
 fieldset {
-    background-color: #f0f5f1;
+    @include background_f0f5f1;
     border: none;
     box-shadow: 2px 2px 5px 2px silver;
     border-radius: 20px;
     width: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 15px;
+    padding: 0;
+    position: relative;
     &:hover {
         background-color: #f3ebf7;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        width: 90%;
+        margin: 10px auto;
+        &:active {
+            background-color: #f3ebf7;
+        }
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        width: 85%;
+        margin: 10px auto;
+        &:active {
+            background-color: #f3ebf7;
+        }
     }
 }
 
 fieldset legend {
-    background-color: #9356DC;
+    @include background_9356DC;
     color: white;
     border-radius: 50%;
     width: 35px;
     height: 35px;
     text-align: center;
     padding: 0px;
+    position: absolute;
+    left: 30px;
+    top: 20px;
     & p {
         margin: auto;
         margin-top: 8px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        left: -15px;
+        top: 20px;
+        width: 30px;
     }
 }
 
 main {
     grid-area: main;
-    font-family: 'Roboto', sans-serif;
-    height: 1400px;
-    background-color: #f0f5f1;
+    @include roboto;
+    @include background_f0f5f1;
     margin-top: 7%;
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         /*Responsive tablette*/
-        height: 2200px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -94,7 +164,6 @@ main {
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive mobile*/
-        height: 1600px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -115,12 +184,12 @@ main {
 
 footer {
     grid-area: footer;
-    font-family: 'Roboto', sans-serif;
+    @include roboto;
     background-color: #222422;
     color: white;
     text-align: center;
-    & h1 {
-        font-family: 'Shrikhand', cursive;
+    & h2 {
+        @include shrikhand;
     }
     & a {
         text-decoration: none;
@@ -129,36 +198,47 @@ footer {
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         /*Responsive tablette*/
         text-align: initial;
+        padding-left: 55px;
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive smartphone*/
         text-align: initial;
+        padding-left: 55px;
     }
 }
 
 #logo {
     max-width: -moz-available;
+    max-width: -webkit-fill-available;
 }
 
-#menilmontant,
-#folie_mericourt,
-#cite_rouge {
-    height: auto;
-    width: 100%;
-    border-radius: 20px 20px 0px 0px;
+#fonctionnement {
+    font-weight: bolder;
 }
 
-#charonne {
-    height: 59.5%;
+.menu_img {
     width: 100%;
-    border-radius: 20px 20px 0px 0px;
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        /*Responsive tablette*/
-        height: 74.082%;
+    height: 200px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-        /*Responsive smartphone*/
-        height: 60.10%;
+}
+
+.menus {
+    @include menus;
+}
+
+.fas.fa-hamburger.fa-2x {
+    color: #9356DC;
+}
+
+.fas.fa-heart.fa-2x {
+    color: #edebe6;
+    border-color: black;
+    &:active {
+        color: #9356DC;
     }
 }
 
@@ -166,6 +246,13 @@ footer {
     display: flex;
     align-items: center;
     margin: auto;
+}
+
+.inside_fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
 }
 
 .main_block_un,
@@ -195,74 +282,56 @@ footer {
 .main_conteneur {
     display: block;
     text-align: center;
-    max-width: 500px;
-    max-height: 700px;
+    width: 25%;
     margin: 20px;
     border-radius: 10%;
     background-color: white;
-}
-
-.main_conteneur_menilmontant {
-    display: block;
-    text-align: center;
-    max-width: 500px;
-    max-height: 700px;
-    margin: 20px;
-    border-radius: 10%;
-    background-color: white;
-    position: relative;
-    .top-right {
-        position: absolute;
-        max-width: 200px;
-        min-width: 100px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        top: 8px;
-        right: 16px;
-        color: green;
-        background-color: #99E2D0;
-    }
-}
-
-.main_conteneur_charonne {
-    background-color: white;
-    max-width: 500px;
-    max-height: 700px;
-    width: 100%;
-    margin: 20px;
-    display: block;
-    text-align: center;
-    border-radius: 10%;
     position: relative;
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         /*Responsive tablette*/
-        width: auto;
-        max-height: 432px;
+        width: 50%;
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive mobile*/
         width: auto;
-        max-height: 312px;
     }
-    .top-right {
-        position: absolute;
-        max-width: 200px;
-        min-width: 100px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        top: 8px;
-        right: 16px;
-        color: green;
-        background-color: #99E2D0;
+}
+
+.top-right {
+    position: absolute;
+    max-width: 200px;
+    min-width: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 8px;
+    right: 16px;
+    color: green;
+    background-color: #99E2D0;
+}
+
+.main_card_dawn {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 }
 
 @keyframes spin {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(45deg);
+        opacity: 1;
     }
     100% {
         transform: rotate(360deg);
+        opacity: 0;
     }
 }
 
@@ -270,18 +339,80 @@ $loader-dur: 1000ms;
 $loader-delay: 150ms;
 $contenue-delay: $loader-dur+$loader-delay * 2;
 .load-container {
-    margin: 90px 0px;
     display: flex;
-    height: 100%;
-    justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    width: 100%;
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         /*Responsive tablette*/
-        margin: auto;
+        align-items: normal;
+        min-width: auto;
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive mobile*/
-        margin: auto;
+        align-items: normal;
+        min-width: auto;
+    }
+}
+
+.inside_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        justify-content: initial;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        justify-content: initial;
+    }
+}
+
+.fas.fa-utensils {
+    margin-right: 10px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-right: 10px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-right: 10px;
+    }
+}
+
+#footer_partenaire {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin: initial;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin: initial;
+    }
+}
+
+#mentions_legales {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-top: auto;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-top: auto;
+    }
+}
+
+.fas.fa-hands-helping {
+    margin-right: 10px;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /*Responsive tablette*/
+        margin-right: 10px;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        /*Responsive mobile*/
+        margin-right: 10px;
     }
 }
 
@@ -290,31 +421,26 @@ $contenue-delay: $loader-dur+$loader-delay * 2;
     border-top: 16px solid #FF79DA;
     border-bottom: 16px solid #9356DC;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    animation: spin 2s linear infinite;
-    margin-left: 50em;
-    margin-bottom: 110px;
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    min-height: 200px;
+    animation: spin 2s linear;
+    opacity: 0;
+    margin: 0 auto;
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         /*Responsive tablette*/
-        margin-top: 250px;
-        margin-left: 21em;
         width: 250px;
-        height: 250px;
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive mobile*/
-        margin-top: 250px;
-        margin-left: 7em;
-        width: 150px;
-        height: 150px;
+        width: 250px;
     }
 }
 
 .contenue {
     animation: contenue 0ms 1300ms both;
     width: 99vw;
-    height: 35vw;
     position: absolute;
     background-size: cover;
     background-position: -20%;
@@ -322,14 +448,6 @@ $contenue-delay: $loader-dur+$loader-delay * 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        /*Responsive tablette*/
-        height: 51vw;
-    }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-        /*Responsive mobile*/
-        height: 95vw;
-    }
 }
 
 @keyframes contenue {
