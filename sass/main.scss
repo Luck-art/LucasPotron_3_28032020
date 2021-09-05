@@ -25,20 +25,20 @@ body {
 }
 
 header {
-    grid-area: header;
+    //grid-area: header;
     text-align: center;
 }
 
-sidebar {
-    grid-area: sidebar;
+section {
+    //grid-area: article;
     display: flex;
     background-color: #dce3de;
     box-shadow: inset 0px 2.5px 1px 0px silver;
     @include roboto;
 }
 
-content {
-    grid-area: content;
+article {
+    //grid-area: content;
     text-align: center;
     @include background_f0f5f1;
     @include roboto;
@@ -58,7 +58,7 @@ content {
     }
 }
 
-content input {
+article input {
     @include background_9356DC;
     color: white;
     height: 50px;
@@ -84,7 +84,7 @@ content input {
 }
 
 aside {
-    grid-area: aside;
+    //grid-area: aside;
     @include roboto;
     & h3 {
         text-align: center;
@@ -137,9 +137,9 @@ fieldset legend {
     position: absolute;
     left: 30px;
     top: 20px;
-    & p {
+    & h6 {
         margin: auto;
-        margin-top: 8px;
+        margin-top: 10px;
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive mobile*/
@@ -183,7 +183,7 @@ main {
 }
 
 footer {
-    grid-area: footer;
+    //grid-area: footer;
     @include roboto;
     background-color: #222422;
     color: white;
@@ -244,7 +244,7 @@ footer {
     }
 }
 
-.inside_sidebar {
+.inside_section {
     display: flex;
     align-items: center;
     margin: auto;
