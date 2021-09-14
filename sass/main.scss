@@ -111,7 +111,7 @@ fieldset {
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         /*Responsive tablette*/
         width: 90%;
-        margin: 10px auto;
+        margin: 30px auto;
         &:active {
             background-color: #f3ebf7;
         }
@@ -199,13 +199,11 @@ footer {
         /*Responsive tablette*/
         text-align: initial;
         padding-left: 55px;
-        margin-top: -35px;
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive smartphone*/
         text-align: initial;
         padding-left: 55px;
-        margin-top: -35px;
     }
 }
 

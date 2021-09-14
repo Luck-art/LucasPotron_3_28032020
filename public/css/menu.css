@@ -47,7 +47,7 @@ main input {
   border-radius: 30px;
   margin-top: 3%;
   border: none;
-  margin-left: 45%;
+  margin-left: 43%;
 }
 main input:hover {
   box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
@@ -74,7 +74,7 @@ footer {
   color: white;
   text-align: center;
 }
-footer h1 {
+footer h2 {
   font-family: "Shrikhand", cursive;
 }
 footer a {
@@ -93,7 +93,6 @@ footer a {
     /*Responsive smartphone*/
     text-align: initial;
     padding-left: 55px;
-    margin-top: -35px;
   }
 }
 
