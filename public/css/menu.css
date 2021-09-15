@@ -105,8 +105,9 @@ footer a {
 }
 
 #logo {
-  max-width: -moz-available;
-  max-width: -webkit-fill-available;
+  min-width: 50%;
+  max-width: 60%;
+  width: auto;
 }
 
 #back {
