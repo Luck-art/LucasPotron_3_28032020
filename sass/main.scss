@@ -239,7 +239,8 @@ footer {
     color: #edebe6;
     border-color: black;
     &:active {
-        animation: hearth 2s forwards 4ms;
+        animation: hearth 1000ms;
+        color: #9356DC;
     }
 }
 

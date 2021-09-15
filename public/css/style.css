@@ -239,7 +239,8 @@ footer a {
   border-color: black;
 }
 .fas.fa-heart.fa-2x:active {
-  animation: hearth 2s forwards 4ms;
+  animation: hearth 1000ms;
+  color: #9356DC;
 }
 
 .inside_section {
