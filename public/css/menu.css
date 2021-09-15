@@ -26,13 +26,13 @@ main {
   margin-bottom: -55px;
   font-family: "Roboto", sans-serif;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   main h1 {
     /*Responsive tablette*/
     font-size: x-large;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   main h1 {
     /*Responsive mobile*/
     font-size: x-large;
@@ -52,14 +52,14 @@ main input {
 main input:hover {
   box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   main input {
     /*Responsive tablette*/
     margin-left: 37%;
     margin-top: 5%;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   main input {
     /*Responsive mobile*/
     margin-top: 5%;
@@ -81,14 +81,14 @@ footer a {
   text-decoration: none;
   color: white;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   footer {
     /*Responsive tablette*/
     text-align: initial;
     padding-left: 55px;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   footer {
     /*Responsive smartphone*/
     text-align: initial;
@@ -123,7 +123,7 @@ footer a {
   font-family: "Shrikhand", cursive;
   text-align: center;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .french {
     /*Responsive tablette*/
     display: flex;
@@ -134,7 +134,7 @@ footer a {
     font-family: "Shrikhand", cursive;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .french {
     /*Responsive mobile*/
     display: flex;
@@ -189,7 +189,7 @@ footer a {
 .card_main:hover .anime__select .circle {
   animation: rotate_circle 0.5s linear;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .card_main {
     /*Responsive tablette*/
     /*&:active .anime__select {
@@ -200,7 +200,7 @@ footer a {
   }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   /*Responsive mobile*/
 }
 .inside_card_main {
@@ -264,39 +264,39 @@ footer a {
   align-items: center;
   justify-content: center;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .inside_footer {
     /*Responsive tablette*/
     justify-content: initial;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .inside_footer {
     /*Responsive mobile*/
     justify-content: initial;
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #footer_partenaire {
     /*Responsive tablette*/
     margin: initial;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   #footer_partenaire {
     /*Responsive mobile*/
     margin: initial;
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #mentions_legales {
     /*Responsive tablette*/
     margin-top: auto;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   #mentions_legales {
     /*Responsive mobile*/
     margin-top: auto;
@@ -306,13 +306,13 @@ footer a {
 .fas.fa-utensils {
   margin-right: 10px;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .fas.fa-utensils {
     /*Responsive tablette*/
     margin-right: 10px;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .fas.fa-utensils {
     /*Responsive mobile*/
     margin-right: 10px;
@@ -322,13 +322,13 @@ footer a {
 .fas.fa-hands-helping {
   margin-right: 10px;
 }
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .fas.fa-hands-helping {
     /*Responsive tablette*/
     margin-right: 10px;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .fas.fa-hands-helping {
     /*Responsive mobile*/
     margin-right: 10px;

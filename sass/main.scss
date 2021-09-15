@@ -47,11 +47,11 @@ article {
     height: auto;
     & h2 {
         margin-top: 3.5%;
-        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
             /*Responsive tablette*/
             margin-top: 10%;
         }
-        @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
             /*Responsive mobile*/
             margin-top: 15%;
         }
@@ -69,13 +69,13 @@ article input {
     &:hover {
         box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
     }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         &:active {
             box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
         }
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         &:active {
             box-shadow: inset 4px 15px 30px 0px #FF79DA, inset 80px 30px 25px 30px #9356DC;
@@ -108,7 +108,7 @@ fieldset {
     &:hover {
         background-color: #f3ebf7;
     }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         width: 90%;
         margin: 30px auto;
@@ -116,7 +116,7 @@ fieldset {
             background-color: #f3ebf7;
         }
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         width: 90%;
         margin: 15px auto;
@@ -141,7 +141,7 @@ fieldset legend {
         margin: auto;
         margin-top: 10px;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         left: -15px;
         top: 20px;
@@ -154,7 +154,7 @@ main {
     @include roboto;
     @include background_f0f5f1;
     margin-top: 7%;
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         display: flex;
         flex-direction: column;
@@ -162,7 +162,7 @@ main {
         padding-bottom: 10%;
         padding-top: 10%;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         display: flex;
         flex-direction: column;
@@ -171,11 +171,11 @@ main {
         padding-top: 10%;
     }
     & h1 {
-        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
             /*Responsive tablette*/
             margin: 0px 0px 0px 10px;
         }
-        @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
             /*Responsive mobile*/
             margin: 0px 0px 0px 10px;
         }
@@ -195,12 +195,12 @@ footer {
         text-decoration: none;
         color: white;
     }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         text-align: initial;
         padding-left: 55px;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive smartphone*/
         text-align: initial;
         padding-left: 55px;
@@ -266,13 +266,13 @@ footer {
         text-decoration: none;
         color: black;
     }
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         flex-direction: column;
         max-height: inherit;
         align-items: center;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         flex-direction: column;
         max-height: inherit;
@@ -287,11 +287,11 @@ footer {
     border-radius: 10%;
     background-color: white;
     position: relative;
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         width: 50%;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         width: auto;
     }
@@ -310,13 +310,13 @@ footer {
 }
 
 .main_card_dawn {
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         display: flex;
         justify-content: space-around;
@@ -344,12 +344,12 @@ $contenue-delay: $loader-dur+$loader-delay * 2;
     height: auto;
     align-items: center;
     width: 100%;
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         align-items: normal;
         min-width: auto;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         align-items: normal;
         min-width: auto;
@@ -360,11 +360,11 @@ $contenue-delay: $loader-dur+$loader-delay * 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         justify-content: initial;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         justify-content: initial;
     }
@@ -372,33 +372,33 @@ $contenue-delay: $loader-dur+$loader-delay * 2;
 
 .fas.fa-utensils {
     margin-right: 10px;
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         margin-right: 10px;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         margin-right: 10px;
     }
 }
 
 #footer_partenaire {
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         margin: initial;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         margin: initial;
     }
 }
 
 #mentions_legales {
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         margin-top: auto;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         margin-top: auto;
     }
@@ -406,11 +406,11 @@ $contenue-delay: $loader-dur+$loader-delay * 2;
 
 .fas.fa-hands-helping {
     margin-right: 10px;
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         margin-right: 10px;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         margin-right: 10px;
     }
@@ -428,11 +428,11 @@ $contenue-delay: $loader-dur+$loader-delay * 2;
     animation: spin 2s linear;
     opacity: 0;
     margin: 0 auto;
-    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
         /*Responsive tablette*/
         width: 250px;
     }
-    @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
         /*Responsive mobile*/
         width: 250px;
     }
