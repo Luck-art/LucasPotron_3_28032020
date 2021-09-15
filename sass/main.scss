@@ -118,8 +118,8 @@ fieldset {
     }
     @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
         /*Responsive mobile*/
-        width: 85%;
-        margin: 10px auto;
+        width: 90%;
+        margin: 15px auto;
         &:active {
             background-color: #f3ebf7;
         }
@@ -440,7 +440,7 @@ $contenue-delay: $loader-dur+$loader-delay * 2;
 
 .contenue {
     animation: contenue 0ms 1300ms both;
-    width: 99vw;
+    width: 100vw;
     position: absolute;
     background-size: cover;
     background-position: -20%;
