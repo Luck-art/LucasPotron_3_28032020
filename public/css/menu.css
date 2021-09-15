@@ -101,6 +101,7 @@ footer a {
   border-color: black;
 }
 .fas.fa-heart.fa-2x:active {
+  animation: hearth 1000ms;
   color: #9356DC;
 }
 
@@ -246,6 +247,20 @@ footer a {
   }
   100% {
     transform: rotate(180deg);
+  }
+}
+@keyframes hearth {
+  0% {
+    transform: scale(0);
+    color: #edebe6;
+  }
+  50% {
+    color: #edebe6;
+  }
+  100% {
+    transform: scale(1);
+    color: #9356DC;
+    opacity: 1;
   }
 }
 .contenue_un {

@@ -98,6 +98,7 @@ footer {
     color: #edebe6;
     border-color: black;
     &:active {
+        animation: hearth 1000ms /*forwards 1ms*/;
         color: #9356DC;
     }
 }
@@ -241,6 +242,21 @@ footer {
     }
     100% {
         transform: rotate(180deg);
+    }
+}
+
+@keyframes hearth {
+    0% {
+        transform: scale(0);
+        color: #edebe6;
+    }
+    50% {
+        color: #edebe6;
+    }
+    100% {
+        transform: scale(1);
+        color: #9356DC;
+        opacity: 1;
     }
 }
 

@@ -239,7 +239,7 @@ footer a {
   border-color: black;
 }
 .fas.fa-heart.fa-2x:active {
-  color: #9356DC;
+  animation: hearth 2s forwards 4ms;
 }
 
 .inside_section {
@@ -369,6 +369,19 @@ footer a {
   }
 }
 
+@keyframes hearth {
+  0% {
+    transform: scale(0);
+    color: #edebe6;
+  }
+  50% {
+    color: #edebe6;
+  }
+  100% {
+    transform: scale(1);
+    color: #9356DC;
+  }
+}
 .inside_footer {
   display: flex;
   align-items: center;
